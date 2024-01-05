@@ -1,4 +1,4 @@
-#if 0
+/*
 MIT License
 
 Copyright (c) 2024 Bernd Boeckmann
@@ -20,7 +20,7 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-#endif
+*/
 
 
 #include <stdio.h>
@@ -90,7 +90,7 @@ typedef struct {
         } ext;
     } x;
 } dpb_t;
-#pragma pack
+#pragma pack()
 
 void dump_dpb( const dpb_t *dpb, int extended )
 {
@@ -334,8 +334,6 @@ int show_dpb( int drive, int ext )
 
 int main( int argc, char *argv[] )
 {
-    bpb_t bpb;
-
     int action = SHOW_NONE;
     int result = EXIT_SUCCESS;
     int ext = 0;
